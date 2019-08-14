@@ -1,18 +1,9 @@
 function checkAB(str) {
     for(var i = 0; i < str.length; i++) {
-        var count = 0;
-        if(str[i] === 'a') {
-            for(var j = 0; j < str.length; j++) {
-                if(str[j] === 'b') {
-                    count++;
-                }
-
-            }
-        }
-        if(count >= 1) {
+        if(str[i] === 'a' && (str[i+4] === 'b' || str[i-4] === 'b')) {
             return true;
-        } 
-    }
+        }
+    }   
     return false;
 }
   
