@@ -12,7 +12,6 @@ function graduates (students) {
             output[students[i].class].push(obj);
         }
     }
-    
     return output;
   }
   
