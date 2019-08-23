@@ -1,4 +1,7 @@
 function changeMe(arr) {
+  if(arr.length === 0) {
+    console.log('""');
+  }
     var data = {};
     for(var i = 0; i < arr.length; i++) {
         console.log((i+1) + '. ' + arr[i][0] + ' ' + arr[i][1] + ':');
@@ -6,11 +9,11 @@ function changeMe(arr) {
         data.lastName = arr[i][1];
         data.gender = arr[i][2];
         if(!arr[i][3] || arr[i][3] > 2019) {
-            data.age = 'Invalid Birth Year';
+          data.age = 'Invalid Birth Year';
         } else {
-            data.age = (2019 - arr[i][3]);
+          data.age = (2019 - arr[i][3]);
         }
-        console.log(data);
+      console.log(data);
     }
   }
   
@@ -47,4 +50,4 @@ changeMe([]); // ""
 //   }
 
 //   console.log(changeMe([['Christ', 'Evans', 'Male', 1982], ['Robert', 'Downey', 'Male']]));
-//   console.log([]);
+//   console.log(changeMe([]));
